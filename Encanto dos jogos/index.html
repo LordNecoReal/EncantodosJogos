@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encanto dos Jogos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <h1>Encanto dos Jogos</h1>
+            </a>
+            <p class="subtitle">Um espaço para explorar a paixão por games.</p>
+        </div>
+        <div class="nav-links">
+            <a href="sobremim.html" class="about-me-link">Sobre Mim</a>
+        </div>
+        <div class="search-bar-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar jogos...">
+            <button onclick="searchGames()" class="music-toggle-link">
+                <i class="fas fa-search"></i> Pesquisar
+            </button>
+            <button id="toggle-music-btn" class="music-toggle-link">
+                <i class="fas fa-volume-mute"></i> Tocar/Silenciar
+            </button>
+        </div>
+    </header>
+    
+    <section class="instruction-section">
+        <h2>Bem-vindo!</h2>
+        <p>Aqui você encontrará uma seleção de jogos incríveis. Navegue pelo site usando os botões de **Consoles** ou pelos filtros de **Gênero** para encontrar o que procura. Se já souber o nome do jogo, use a **barra de pesquisa** para encontrá-lo rapidamente. Divirta-se!</p>
+    </section>
+
+    <div class="filters">
+        <a href="index.html" class="active">Todos</a>
+        <a href="acao.html">Ação</a>
+        <a href="luta.html">Luta</a>
+        <a href="rpg.html">RPG</a>
+        <a href="aventura.html">Aventura</a>
+        <a href="esporte.html">Esporte</a>
+        <a href="simulacao.html">Simulação</a>
+        <a href="consoles.html">Consoles</a>
+    </div>
+
+    <main class="game-grid">
+        <div class="game-card" data-genre="Ação Luta Aventura" data-search-terms="shodai nekketsu kouha kunio-kun">
+            <img src="https://placehold.co/400x500/000000/FFFFFF?text=Shodai+Nekketsu+Kouha" alt="Capa de Shodai Nekketsu Kouha Kunio-kun">
+            <h3>Shodai Nekketsu Kouha Kunio-kun</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> Ação, Luta, Aventura</p>
+                <p><strong>Data de Criação:</strong> 1992</p>
+                <p><strong>Empresa:</strong> Technōs Japan</p>
+                <p><strong>Plataforma:</strong> SNES</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Um jogo de ação e aventura que faz parte da famosa série Kunio-kun. O jogo combina elementos de briga de rua com exploração de mapa, onde o jogador assume o papel de Kunio para lutar contra gangues rivais.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="Ação Aventura RPG" data-search-terms="alundra">
+            <img src="https://placehold.co/400x500/000000/FFFFFF?text=Alundra" alt="Capa de Alundra">
+            <h3>Alundra</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> Ação, Aventura, RPG</p>
+                <p><strong>Data de Criação:</strong> 1997</p>
+                <p><strong>Empresa:</strong> Matrix Software</p>
+                <p><strong>Plataforma:</strong> PlayStation</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Alundra é um RPG de ação aclamado pela crítica, conhecido por seu enredo sombrio e complexo, quebra-cabeças desafiadores e combate envolvente. O herói, Alundra, tem a capacidade de entrar nos sonhos das pessoas para salvá-las de suas maldições.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="RPG Aventura" data-search-terms="grandia">
+            <img src="https://placehold.co/400x500/000000/FFFFFF?text=Grandia" alt="Capa de Grandia">
+            <h3>Grandia</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> RPG, Aventura</p>
+                <p><strong>Data de Criação:</strong> 1997</p>
+                <p><strong>Empresa:</strong> Game Arts</p>
+                <p><strong>Plataforma:</strong> Sega Saturn, PlayStation</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Um clássico RPG com foco em aventura e exploração. Grandia é conhecido por seu sistema de combate por turnos inovador e dinâmico, além de uma história emocionante sobre a jornada de um jovem explorador em busca do fim do mundo.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="RPG" data-search-terms="breath of fire 1 bof1">
+            <img src="https://placehold.co/400x500/000000/FFFFFF?text=Breath+of+Fire+1" alt="Capa de Breath of Fire 1">
+            <h3>Breath of Fire 1</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> RPG</p>
+                <p><strong>Data de Criação:</strong> 1993</p>
+                <p><strong>Empresa:</strong> Capcom</p>
+                <p><strong>Plataforma:</strong> SNES</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>O primeiro jogo da série Breath of Fire, que segue a história de Ryu, um membro de uma raça antiga que pode se transformar em dragões. Ele parte em uma jornada para encontrar sua irmã e impedir um império maligno de dominar o mundo.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="RPG" data-search-terms="breath of fire 2 bof2">
+            <img src="https://placehold.co/400x500/000000/FFFFFF?text=Breath+of+Fire+2" alt="Capa de Breath of Fire 2">
+            <h3>Breath of Fire 2</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> RPG</p>
+                <p><strong>Data de Criação:</strong> 1994</p>
+                <p><strong>Empresa:</strong> Capcom</p>
+                <p><strong>Plataforma:</strong> SNES</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>A sequência de Breath of Fire, que se passa 500 anos após o primeiro jogo. Ryu, um garoto com a capacidade de se transformar em dragão, se junta a um grupo de heróis para descobrir a verdade sobre seu passado e lutar contra uma força demoníaca.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="RPG" data-search-terms="breath of fire 3 bof3">
+            <img src="https://placehold.co/400x500/000000/FFFFFF?text=Breath+of+Fire+3" alt="Capa de Breath of Fire 3">
+            <h3>Breath of Fire 3</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> RPG</p>
+                <p><strong>Data de Criação:</strong> 1997</p>
+                <p><strong>Empresa:</strong> Capcom</p>
+                <p><strong>Plataforma:</strong> PlayStation</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>O primeiro jogo da série a usar gráficos em 3D. O jogo segue a jornada de um jovem dragão que tenta descobrir a verdade sobre sua espécie e seu passado. É aclamado por sua história, personagens e jogabilidade.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="RPG Aventura" data-search-terms="chrono trigger">
+            <img src="Imagens/chrono trigger.jpg" alt="Capa de Chrono Trigger">
+            <h3>Chrono Trigger</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> RPG, Aventura</p>
+                <p><strong>Data de Criação:</strong> 11 de março de 1995</p>
+                <p><strong>Empresa:</strong> Square Co., Ltd.</p>
+                <p><strong>Plataforma:</strong> SNES, PlayStation, Nintendo DS, iOS, Android, PC</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Chrono Trigger é um jogo de RPG desenvolvido pela Square, lançado em 1995 para o Super Nintendo. O jogo segue um grupo de aventureiros que viaja através do tempo para evitar uma catástrofe global. É amplamente aclamado pela crítica por sua jogabilidade, narrativa e design de som inovadores.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+        
+        <div class="game-card" data-genre="RPG" data-search-terms="final fantasy">
+            <img src="Imagens/Final Fantasy Pixel Remaster.jpg" alt="Capa de Final Fantasy Pixel Remaster">
+            <h3>Final Fantasy Pixel Remaster</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> RPG</p>
+                <p><strong>Data de Criação:</strong> 2021</p>
+                <p><strong>Empresa:</strong> Square Enix</p>
+                <p><strong>Plataforma:</strong> Windows, PS4, Switch, iOS e Android</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>A série FINAL FANTASY Pixel Remaster traz os seis primeiros jogos da franquia, de FINAL FANTASY I a FINAL FANTASY VI, de volta à vida com novos gráficos 2D em pixel, trilha sonora rearranjada e diversas melhorias de qualidade de vida, como interface modernizada, opções de auto-batalha e multiplicadores de EXP.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+        
+        <div class="game-card" data-genre="RPG Aventura" data-search-terms="legend of mana">
+            <img src="Imagens/Legend of Mana.jpg" alt="Capa de Legend of Mana">
+            <h3>Legend of Mana</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> RPG, Aventura</p>
+                <p><strong>Data de Criação:</strong> 24 de junho de 1999 (ps1 versão original)</p>
+                <p><strong>Empresa:</strong> Square Enix</p>
+                <p><strong>Plataforma:</strong> Sim(Versão Remasterizada) Plataforma: PS1, PS4, Nintendo Switch, windows, android e iOS</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Legend of Mana é um jogo eletrônico do gênero RPG, lançado no final de 2000 (1999 no Japão) para PlayStation. O jogo possibilita a escolha de um personagem masculino ou feminino e possui vários personagens espalhados pelo mundo do jogo que entrarão para seu grupo para que ajude nas missões dele e vice versa, ademais, um segundo jogador pode se juntar ao jogo ao conectar um segundo controle e controlar estes companheiros. Em meio a estas, existem as histórias secundárias do game que podem ser criadas pelo jogador para o universo do jogo. A jogabilidade é uma das mais inovadoras da franquia, se não a mais inovadora. Existe a possibilidade de lutar com uma vasta variedade de armas, cada uma com seus próprios ataques e movimentos. O game possui uma variedade de locais para serem explorados, desde florestas, desertos, montanhas, vulcões, rios e até mesmo o céu. A trilha sonora é um dos pontos altos do jogo, sendo amplamente aclamada pela crítica.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="Ação Aventura" data-search-terms="gta 5 grand theft auto v">
+            <img src="Imagens/Gta 5.jpg" alt="Capa de Grand Theft Auto V">
+            <h3>Grand Theft Auto V</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> Ação, Aventura</p>
+                <p><strong>Data de Criação:</strong> 17 de setembro de 2013</p>
+                <p><strong>Empresa:</strong> Rockstar Games</p>
+                <p><strong>Plataforma:</strong> PS3, PS4, PS5, Xbox 360, Xbox One, Xbox Series X/S e PC</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Um jogo de ação e aventura em mundo aberto, que segue a história de três criminosos cujos caminhos se entrelaçam em Los Santos.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="Ação RPG" data-search-terms="the witcher 3 wild hunt">
+            <img src="Imagens/The Witcher 3 Wild Hunt.jpg" alt="Capa de The Witcher 3: Wild Hunt">
+            <h3>The Witcher 3: Wild Hunt</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> Ação, RPG</p>
+                <p><strong>Data de Criação:</strong> 19 de maio de 2015</p>
+                <p><strong>Empresa:</strong> CD Projekt</p>
+                <p><strong>Plataforma:</strong> PC, PS4, PS5, Xbox One, Xbox Series X/S e Nintendo Switch</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>É um jogo de RPG de ação em mundo aberto. O jogo se passa em um mundo de fantasia e segue a história de Geralt de Rívia, um caçador de monstros. O jogo é amplamente aclamado pela crítica por sua narrativa, jogabilidade e mundo aberto.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+        
+        <div class="game-card" data-genre="RPG Aventura" data-search-terms="baldurs gate 3">
+            <img src="Imagens/Baldur's Gate 3.jpg" alt="Capa de Baldur's Gate 3">
+            <h3>Baldur's Gate 3</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> RPG, Aventura</p>
+                <p><strong>Data de Criação:</strong> 6 de outubro de 2020</p>
+                <p><strong>Empresa:</strong> Larian Studios</p>
+                <p><strong>Plataforma:</strong> PC, PlayStation 5, Xbox Series X/S e macOS</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Baldur's Gate 3 é um jogo eletrônico de RPG desenvolvido e publicado pela Larian Studios. O jogo é ambientado no universo de Dungeons & Dragons e segue a história de um grupo de aventureiros que se unem para lutar contra uma ameaça maligna.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="Ação Aventura RPG" data-search-terms="elden ring">
+            <img src="Imagens/elden ring.jpg" alt="Capa de Elden Ring">
+            <h3>Elden Ring</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> Ação, Aventura, RPG</p>
+                <p><strong>Data de Criação:</strong> 25 de fevereiro de 2022</p>
+                <p><strong>Empresa:</strong> FromSoftware</p>
+                <p><strong>Plataforma:</strong> PS4, PS5, Xbox One, Xbox Series X/S e PC</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Elden Ring é um jogo de RPG de ação em mundo aberto. O jogo se passa em um mundo de fantasia e segue a história de um herói que deve viajar pelo mundo e lutar contra inimigos para restaurar a ordem.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+        
+        <div class="game-card" data-genre="Ação Aventura RPG" data-search-terms="secret of mana">
+            <img src="Imagens/Secret of Mana.jpg" alt="Capa de Secret of Mana">
+            <h3>Secret of Mana</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> Ação, Aventura, RPG</p>
+                <p><strong>Data de Criação:</strong> 1993(Primeira Versão Snes)</p>
+                <p><strong>Empresa:</strong> Square Enix</p>
+                <p><strong>Plataforma:</strong> SNES, Nintendo Switch, PS4 e Windows</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>O clássico RPG de ação de 1993, Secret of Mana, segue a jornada de três heróis que se unem para evitar que um império malvado use o poder de uma antiga fortaleza voadora para dominar o mundo. Com um sistema de combate em tempo real e a possibilidade de co-op, o jogo se tornou um marco dos RPGs de sua época. </p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="Ação Luta" data-search-terms="street fighter 6">
+            <img src="Imagens/street fighter 6.jpg" alt="Capa de Street Fighter 6">
+            <h3>Street Fighter 6</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> Ação, Luta</p>
+                <p><strong>Data de Criação:</strong> 2 de junho de 2023</p>
+                <p><strong>Empresa:</strong> Capcom</p>
+                <p><strong>Plataforma:</strong> PS4, PS5, Xbox Series X/S e PC</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Street Fighter 6 é um jogo de luta desenvolvido e publicado pela Capcom. O jogo é o sexto da série Street Fighter e apresenta novos personagens, modos de jogo e mecânicas de combate.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="Esporte" data-search-terms="fifa 23">
+            <img src="Imagens/fifa 23.jpg" alt="Capa de Fifa 23">
+            <h3>Fifa 23</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> Esporte</p>
+                <p><strong>Data de Criação:</strong> 30 de setembro de 2022</p>
+                <p><strong>Empresa:</strong> Eletronic Arts</p>
+                <p><strong>Plataforma:</strong> PS4, PS5, Xbox One, Xbox Series X/S, Nintendo Switch e PC</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>FIFA 23 é um jogo de simulação de futebol. É o 30º e último jogo da série FIFA, pois a EA Sports não renovou a licença com a FIFA. O jogo apresenta novos modos de jogo, como o modo de carreira e o modo de Ultimate Team.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="Esporte" data-search-terms="olympic games tokyo 2020">
+            <img src="Imagens/olympic games tokyo 2020.jpg" alt="Capa de Olympic Games Tokyo 2020">
+            <h3>Olympic Games Tokyo 2020</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> Esporte</p>
+                <p><strong>Data de Criação:</strong> 24 de julho de 2019</p>
+                <p><strong>Empresa:</strong> Sega</p>
+                <p><strong>Plataforma:</strong> PS4, Xbox One, Nintendo Switch e PC</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Olympic Games Tokyo 2020 é um jogo eletrônico de esportes. O jogo apresenta 18 eventos olímpicos, incluindo atletismo, natação, ginástica e muito mais. O jogo também apresenta um modo de carreira, onde o jogador pode criar seu próprio atleta e competir em uma variedade de eventos para se tornar o melhor atleta do mundo.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="Ação Aventura RPG" data-search-terms="sekiro shadows die twice">
+            <img src="Imagens/Sekiro Shadows Die Twice.jpg" alt="Capa de Sekiro: Shadows Die Twice">
+            <h3>Sekiro: Shadows Die Twice</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> Ação, Aventura, RPG</p>
+                <p><strong>Data de Criação:</strong> 22 de março de 2019</p>
+                <p><strong>Empresa:</strong> FromSoftware</p>
+                <p><strong>Plataforma:</strong> PC, PlayStation 4 e Xbox One</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Sekiro: Shadows Die Twice é um jogo de ação e aventura, que se passa no Japão feudal e segue a história de um ninja que deve proteger um jovem herdeiro de um clã de samurais.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+
+        <div class="game-card" data-genre="Simulação" data-search-terms="stardew valley">
+            <img src="Imagens/Stardew Valley.jpg" alt="Capa de Stardew Valley">
+            <h3>Stardew Valley</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> Simulação</p>
+                <p><strong>Data de Criação:</strong> 26 de fevereiro de 2016</p>
+                <p><strong>Empresa:</strong> ConcernedApe</p>
+                <p><strong>Plataforma:</strong> PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch, iOS, Android, Linux e macOS</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Stardew Valley é um jogo de simulação de fazenda. O jogo se passa em uma pequena cidade rural e segue a história de um personagem que herda a fazenda de seu avô. O jogo é amplamente aclamado pela crítica por sua jogabilidade relaxante e mundo aberto.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+        
+        <div class="game-card" data-genre="RPG" data-search-terms="trials of mana">
+            <img src="Imagens/Trials of Mana.jpg" alt="Capa de Trials of Mana">
+            <h3>Trials of Mana</h3>
+            <div class="game-details" style="display:none;">
+                <p><strong>Gênero:</strong> RPG</p>
+                <p><strong>Data de Criação:</strong> 24 de abril de 2020</p>
+                <p><strong>Empresa:</strong> Square Enix</p>
+                <p><strong>Plataforma:</strong> PS4, Nintendo Switch e Windows</p>
+            </div>
+            <div class="game-description" style="display:none;">
+                <p>Trials of Mana é um jogo de RPG de ação. O jogo é um remake do jogo de mesmo nome, lançado em 1995 para o Super Famicom. O jogo segue a história de seis heróis que devem se unir para lutar contra uma ameaça maligna. O jogo apresenta um sistema de combate em tempo real, onde o jogador pode controlar um personagem e lutar contra inimigos. O jogo também apresenta um sistema de classes, onde o jogador pode escolher uma classe para cada personagem e evoluir suas habilidades.</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails(this)">Clique aqui para saber mais</button>
+        </div>
+    </main>
+
+    <div class="pagination">
+        <button id="prevBtn" onclick="changePage(-1)">Anterior</button>
+        <span id="pageInfo">Página 1 de 1</span>
+        <button id="nextBtn" onclick="changePage(1)">Próximo</button>
+    </div>
+
+    <div class="game-details-overlay" id="game-details-overlay" style="display:none;">
+        <div class="game-details-modal" id="game-details-modal">
+            <span class="close-btn" onclick="closeGameDetails()">&times;</span>
+            <h2 id="game-details-title"></h2>
+            <div id="game-details-full-details"></div>
+            <h3>Descrição</h3>
+            <div id="game-details-full-description"></div>
+        </div>
+    </div>
+
+    <audio id="background-music" src="Musicas/Tower Of Zot - Final Fantasy IV OST (Arrangement).mp3" loop></audio>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encanto dos Jogos - Ação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <h1>Encanto dos Jogos</h1>
+            </a>
+            <p class="subtitle">Um espaço para explorar a paixão por games.</p>
+        </div>
+        <div class="nav-links">
+            <a href="sobremim.html" class="about-me-link">Sobre Mim</a>
+        </div>
+        <div class="search-bar-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar jogos...">
+            <button onclick="searchGames()" class="music-toggle-link">
+                <i class="fas fa-search"></i> Pesquisar
+            </button>
+            <button id="toggle-music-btn" class="music-toggle-link">
+                <i class="fas fa-volume-mute"></i> Tocar/Silenciar
+            </button>
+        </div>
+    </header>
+
+    <section class="instruction-section">
+        <h2>Bem-vindo(a) à área de Jogos de Ação!</h2>
+        <p>Aqui você encontrará uma seleção de jogos de ação, escolha um gênero abaixo para explorar mais jogos ou explore toda a nossa coleção.</p>
+    </section>
+
+    <div class="filters">
+        <a href="index.html">Todos</a>
+        <a href="acao.html" class="active">Ação</a>
+        <a href="luta.html">Luta</a>
+        <a href="rpg.html">RPG</a>
+        <a href="aventura.html">Aventura</a>
+        <a href="esporte.html">Esporte</a>
+        <a href="simulacao.html">Simulação</a>
+        <a href="consoles.html">Consoles</a>
+    </div>
+
+    <main class="game-grid">
+        <div class="game-card" data-title="God of War" data-category="acao">
+            <img src="https://placehold.co/400x200" alt="Capa do Jogo God of War">
+            <div class="game-info">
+                <h3>God of War</h3>
+                <p><strong>Gênero:</strong> Ação, Aventura</p>
+                <p><strong>Desenvolvedora:</strong> Santa Monica Studio</p>
+                <p><strong>Ano:</strong> 2018</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails('God of War')">Detalhes</button>
+        </div>
+        <div class="game-card" data-title="The Last of Us Part I" data-category="acao">
+            <img src="https://placehold.co/400x200" alt="Capa do Jogo The Last of Us Part I">
+            <div class="game-info">
+                <h3>The Last of Us Part I</h3>
+                <p><strong>Gênero:</strong> Ação, Aventura, Sobrevivência</p>
+                <p><strong>Desenvolvedora:</strong> Naughty Dog</p>
+                <p><strong>Ano:</strong> 2022</p>
+            </div>
+            <button class="info-button" onclick="openGameDetails('The Last of Us Part I')">Detalhes</button>
+        </div>
+    </main>
+
+    <div class="game-details-overlay" id="game-details-overlay" style="display:none;">
+        <div class="game-details-modal" id="game-details-modal">
+            <span class="close-btn" onclick="closeGameDetails()">&times;</span>
+            <h2 id="game-details-title"></h2>
+            <div id="game-details-full-details"></div>
+            <h3>Descrição</h3>
+            <div id="game-details-full-description"></div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Encanto dos Jogos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <audio id="background-music" src="Musicas/Tower Of Zot - Final Fantasy IV OST (Arrangement).mp3" loop></audio>
+
+</body>
+</html>
