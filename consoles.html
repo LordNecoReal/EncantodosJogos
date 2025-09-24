@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consoles de Jogos</title>
+    <title>Encanto dos Jogos - Consoles</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -16,17 +16,28 @@
             </a>
             <p class="subtitle">Um espaço para explorar a paixão por games.</p>
         </div>
-        <div class="nav-links">
-            <a href="sobremim.html" class="about-me-link">Sobre Mim</a>
-        </div>
-        <div class="search-bar-container">
-            <input type="text" id="searchInput" placeholder="Pesquisar jogos...">
-            <button onclick="searchGames()" class="music-toggle-link">
-                <i class="fas fa-search"></i> Pesquisar
-            </button>
-            <button id="toggle-music-btn" class="music-toggle-link">
-                <i class="fas fa-volume-mute"></i> Tocar/Silenciar
-            </button>
+        <div class="nav-and-search-container">
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item">Início</a>
+                <div class="dropdown">
+                    <span class="dropbtn">Gêneros <i class="fas fa-caret-down"></i></span>
+                    <div class="dropdown-content" id="genre-dropdown">
+                        <a href="#" class="filter-btn" data-genre="RPG">RPG</a>
+                    </div>
+                </div>
+                <a href="consoles.html" class="nav-item">Consoles</a>
+                <a href="sobremim.html" class="nav-item">Sobre Mim</a>
+                <a href="faq.html" class="nav-item">FAQ</a>
+            </nav>
+            <div class="search-bar-container">
+                <input type="text" id="searchInput" placeholder="Pesquisar jogos...">
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button id="toggle-music-btn" class="music-toggle-link">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -34,17 +45,6 @@
         <h2>Consoles em Destaque</h2>
         <p>Explore a história e os detalhes dos consoles que marcaram gerações e construíram a paixão pelo mundo dos games.</p>
     </section>
-
-    <div class="filters">
-        <a href="index.html">Todos</a>
-        <a href="acao.html">Ação</a>
-        <a href="luta.html">Luta</a>
-        <a href="rpg.html">RPG</a>
-        <a href="aventura.html">Aventura</a>
-        <a href="esporte.html">Esporte</a>
-        <a href="simulacao.html">Simulação</a>
-        <a href="consoles.html" class="active">Consoles</a>
-    </div>
 
     <main class="console-grid">
         <div class="console-card">

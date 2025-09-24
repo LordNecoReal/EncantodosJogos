@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Encanto dos Jogos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos específicos para a página 'FAQ' */
+        .page-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .page-container h2 {
+            font-family: 'Press Start 2P', cursive;
+            color: #ff9900;
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        .faq-item h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            color: #ffffff;
+            font-size: 1.4em;
+            margin-bottom: 5px;
+        }
+        .faq-item p {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Encanto dos Jogos</h1>
+            <p class="subtitle">Um local para tirar suas dúvidas sobre o site.</p>
+        </div>
+        <div class="nav-and-search-container">
+            <div class="search-bar-container" style="visibility: hidden;">
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item">Início</a>
+                <div class="nav-item dropdown">
+                    <span class="dropbtn">Gêneros <i class="fas fa-caret-down"></i></span>
+                    <div class="dropdown-content">
+                        <a href="#" class="filter-btn" data-genre="Ação">Ação</a>
+                        <a href="#" class="filter-btn" data-genre="RPG">RPG</a>
+                        <a href="#" class="filter-btn" data-genre="Aventura">Aventura</a>
+                        <a href="#" class="filter-btn" data-genre="Esporte">Esporte</a>
+                        <a href="#" class="filter-btn" data-genre="Simulação">Simulação</a>
+                        <a href="#" class="filter-btn" data-genre="Luta">Luta</a>
+                        <a href="#" class="filter-btn" data-genre="Todos">Todos</a>
+                    </div>
+                </div>
+                <a href="sobremim.html" class="nav-item">Sobre Mim</a>
+                </nav>
+            <button id="toggle-music-btn" class="music-toggle-link" style="visibility: hidden;">
+                <i class="fas fa-volume-mute"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h3>O que é o Encanto dos Jogos?</h3>
+            <p>Este site é uma coleção de informações sobre jogos que marcaram a história. É um projeto pessoal para catalogar e compartilhar a paixão por games antigos e novos.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Como posso pesquisar por um jogo?</h3>
+            <p>Você pode usar a barra de pesquisa no topo da página. Basta digitar o nome do jogo ou termos relacionados e o site irá filtrar os resultados para você.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Posso contribuir com o site?</h3>
+            <p>No momento, o site é um projeto pessoal. Se você deseja ajudar a mantê-lo, pode me apoiar na página <a href="sobremim.html">Sobre Mim</a>.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Os jogos estão disponíveis para download?</h3>
+            <p>Não. O site serve apenas como uma base de dados e um guia informativo sobre os jogos, sem links para downloads ou emuladores.</p>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
